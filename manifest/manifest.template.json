@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.17/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.17",
+  "version": "1.0.0",
+  "id": "96faf0f8-c373-465d-a3d4-c1cd00a70cf4",
+  "developer": {
+    "name": "YouSmartThing",
+    "websiteUrl": "{{APP_URL}}",
+    "privacyUrl": "{{APP_URL}}",
+    "termsOfUseUrl": "{{APP_URL}}"
+  },
+  "name": { "short": "Sprint Poker", "full": "Sprint Poker" },
+  "description": {
+    "short": "Fibonacci planning poker for Teams meetings.",
+    "full": "Everyone on the call picks a Fibonacci card; votes stay hidden until someone clicks Show votes, then the mean, median and mode are displayed."
+  },
+  "icons": { "color": "color.png", "outline": "outline.png" },
+  "accentColor": "#5B5FC7",
+  "configurableTabs": [
+    {
+      "configurationUrl": "{{APP_URL}}/?view=config",
+      "canUpdateConfiguration": false,
+      "scopes": ["groupChat", "team"],
+      "context": ["meetingSidePanel", "meetingStage"]
+    }
+  ],
+  "permissions": ["identity"],
+  "validDomains": ["{{APP_DOMAIN}}"],
+  "showLoadingIndicator": false,
+  "authorization": {
+    "permissions": {
+      "resourceSpecific": [
+        { "name": "LiveShareSession.ReadWrite.Chat", "type": "Delegated" },
+        { "name": "LiveShareSession.ReadWrite.Group", "type": "Delegated" },
+        { "name": "MeetingStage.Write.Chat", "type": "Delegated" },
+        { "name": "ChannelMeetingStage.Write.Group", "type": "Delegated" }
+      ]
+    }
+  }
+}
