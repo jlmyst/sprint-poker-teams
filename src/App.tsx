@@ -50,7 +50,6 @@ export function App() {
           {stats ? (
             <>
               <Stat label="Mean" value={formatNumber(stats.mean)} />
-              <Stat label="Median" value={formatNumber(stats.median)} />
               <Stat label="Mode" value={stats.modes.join(", ")} />
             </>
           ) : (

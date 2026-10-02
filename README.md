@@ -2,7 +2,7 @@
 
 Fibonacci planning poker that runs inside a Teams meeting. Everyone on the call picks a card,
 votes stay hidden (you only see who has voted) until someone clicks **Show votes**, then the
-mean, median and mode are shown. **New round** clears everything.
+mean and mode are shown. **New round** clears everything.
 
 Built on [Live Share](https://learn.microsoft.com/microsoftteams/platform/apps-in-teams-meetings/teams-live-share-overview):
 Microsoft hosts the real-time sync for meetings, so there is **no backend**, only a static site.
